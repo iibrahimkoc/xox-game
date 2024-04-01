@@ -43,6 +43,7 @@ function restart() {
     for (var i = 0; i < 9; i++) {
         document.querySelector(".gameTable").innerHTML += `<div class="box${i + 1}" onclick="touch(${i + 1})"></div>`
     }
+    document.querySelector(".gameTable").innerHTML += `<div class="winStick"></div>`
 
     resetValue();
 
@@ -74,11 +75,14 @@ function checkTable(hamle, oyuncuSirasi) {
     else if ((kutuErisim(1).innerHTML == hamle) && (kutuErisim(5).innerHTML == hamle) && (kutuErisim(9).innerHTML == hamle)) {
         win(hamle, "Kazandı", 7);
     }
-    else if ((kutuErisim(2).innerHTML == hamle) && (kutuErisim(5).innerHTML == hamle) && (kutuErisim(7).innerHTML == hamle)) {
+    else if ((kutuErisim(3).innerHTML == hamle) && (kutuErisim(5).innerHTML == hamle) && (kutuErisim(7).innerHTML == hamle)) {
         win(hamle, "Kazandı", 8);
     }
     else if (oyuncuSirasi == 9) {
         win("X-O", "Berabere", 9);
+    }
+    else{
+
     }
 
 }
@@ -95,6 +99,7 @@ function win(kazananOyuncu, sonucDurumu, value) {
     switch (value) {
         case 1: {
             document.querySelector(".winStick").style = `
+            display: flex;
             right: 5rem;
             top: 10rem;
             width: 50rem;
@@ -103,6 +108,7 @@ function win(kazananOyuncu, sonucDurumu, value) {
         }
         case 2: {
             document.querySelector(".winStick").style = `
+            display: flex;
             right: 5rem;
             top: 30rem;
             width: 50rem;
@@ -111,6 +117,7 @@ function win(kazananOyuncu, sonucDurumu, value) {
         }
         case 3: {
             document.querySelector(".winStick").style = `
+            display: flex;
             right: 5rem;
             top: 50rem;
             width: 50rem;
@@ -119,6 +126,7 @@ function win(kazananOyuncu, sonucDurumu, value) {
         }
         case 4: {
             document.querySelector(".winStick").style = `
+            display: flex;
             right: 49.5rem;
             top: 5rem;
             width: 0.7rem;
@@ -127,6 +135,7 @@ function win(kazananOyuncu, sonucDurumu, value) {
         }
         case 5: {
             document.querySelector(".winStick").style = `
+            display: flex;
             right: 29.5rem;
             top: 5rem;
             width: 0.7rem;
@@ -135,6 +144,7 @@ function win(kazananOyuncu, sonucDurumu, value) {
         }
         case 6: {
             document.querySelector(".winStick").style = `
+            display: flex;
             right: 9.5rem;
             top: 5rem;
             width: 0.7rem;
@@ -143,6 +153,7 @@ function win(kazananOyuncu, sonucDurumu, value) {
         }
         case 7: {
             document.querySelector(".winStick").style = `
+            display: flex;
             right: 30rem;
             top: 0rem;
             transform: rotate(135deg);
@@ -152,6 +163,7 @@ function win(kazananOyuncu, sonucDurumu, value) {
         }
         case 8: {
             document.querySelector(".winStick").style = `
+            display: flex;
             right: 29.5rem;
             top: 0rem;
             transform: rotate(45deg);
@@ -163,7 +175,6 @@ function win(kazananOyuncu, sonucDurumu, value) {
             break;
         }
     }
-    document.querySelector(".winStick").style.display = "flex";
 
     /* BEKLET 3 SN FELAN */
 
