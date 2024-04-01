@@ -95,51 +95,7 @@ body {
 .winStick{
     display: none;
     position: absolute;
-    right: 5rem;
-    top: 10rem;
-    width: 50rem;
-    height: 0.7rem;
     background-color: black;
-    /*
-    right: 9.5rem;
-    top: 5rem;
-
-    right: 29.5rem;
-    top: 5rem;
-
-    right: 49.5rem;
-    top: 5rem;
-    width: 0.7rem;
-    height: 50rem;
-
-
-    right: 29rem;
-    top: 0rem;
-    transform: rotate(45deg);
-    width: 0.7rem;
-    height: 60rem;
-
-    right: 29rem;
-    top: 0rem;
-    transform: rotate(135deg);
-    width: 0.7rem;
-    height: 60rem;
-
-    right: 5rem;
-    top: 50rem;
-    width: 50rem;
-    height: 0.7rem;
-    
-    right: 5rem;
-    top: 30rem;
-    width: 50rem;
-    height: 0.7rem;
-
-    right: 5rem;
-    top: 10rem;
-    width: 50rem;
-    height: 0.7rem;
-    */
 }
 
 .box2,
